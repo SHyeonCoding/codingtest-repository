@@ -15,11 +15,16 @@ public class Main {
             int cnt = 0;
 
             for (int j = start; j <= end; j++) {
-                String num = String.valueOf(j);
-                for (int k = 0; k < num.length(); k++) {
-                    if(num.charAt(k) == '0') cnt++;
+                int x = j;
+
+                if(x == 0) cnt++;
+
+                while (x > 1) {
+                    if(x % 10 == 0) cnt ++;
+                    x /= 10;
                 }
             }
+            
             sb.append(cnt).append("\n");
         }
 
