@@ -11,13 +11,9 @@ public class Main {
         for (int i = 0; i < n; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
             int mistake = Integer.parseInt(st.nextToken());
-            String[] str = st.nextToken().split("");
+            String str = st.nextToken();
 
-            str[mistake - 1] = "";
-            for (String s : str) {
-                sb.append(s);
-            }
-            sb.append("\n");
+            sb.append(str, 0, mistake - 1).append(str.substring(mistake)).append("\n");
         }
 
         System.out.println(sb);
