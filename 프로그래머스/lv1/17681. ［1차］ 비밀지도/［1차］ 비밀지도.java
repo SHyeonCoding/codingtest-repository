@@ -6,7 +6,7 @@ class Solution {
             String s = Integer.toBinaryString(arr1[i] | arr2[i]);
             
             s = "0".repeat(arr1.length - s.length()) + s;
-            answer[i] = s.replace("1", "#").replace("2", "#").replace("0", " ");
+            answer[i] = s.replace("1", "#").replace("0", " ");
         }
         
         return answer;
